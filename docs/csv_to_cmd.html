@@ -111,13 +111,14 @@
       if(usefulKey(key)){
         // selector should be at start before keys
         if(key == "selector"){
-          result = exports[key] + result;
+          result = exports[key].normalized + result;
         }
+        
         else result += " --"+key+"="+exports[key];
       }
       
     }
-		
+    
 		box.value = result;
 		
 		box.select();
